@@ -58,17 +58,17 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="password" type="text" id="password" class="form-control" placeholder="password">
+                      <input name="password" type="password" id="password" class="form-control" placeholder="password">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="newpassword" type="text" id="newpassword" class="form-control" placeholder="new password">
+                      <input name="newpassword" type="password" id="newpassword" class="form-control" placeholder="new password">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input name="reenter" type="text" id="reenter" class="form-control" placeholder="confirm password">
+                      <input name="reenter" type="password" id="reenter" class="form-control" placeholder="confirm password">
                     </div>
                   </div>
                 </div>

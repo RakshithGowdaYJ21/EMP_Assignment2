@@ -52,15 +52,17 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Your favorite Flim star :</label>
-                      <input name="star" type="text" id="star" class="form-control">
+                      <label>Your Email  :</label>
+                      <input name="email" type="text" id="email" class="form-control">
+                       <label>Your favorite Flim star :</label>
+                      <input name="star" type="password" id="star" class="form-control">
                     </div>
                   </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
-                    <input type="submit" name="submit" value="Wait..." class="btn btn-outline-info btn-lg pl-4 ml-4">
+                    <input type="submit" name="submit" value="forgot password" class="btn btn-outline-info btn-lg pl-4 ml-4">
                   </div>
                 </div>
               </div>

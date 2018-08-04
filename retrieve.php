@@ -15,20 +15,27 @@
 				$username="root"; 
 				$password=""; 
 				$db_name="admin_db"; 
-				$tbl_name="login"; 
-				$conn=mysqli_connect("$host", "$username", "$password","$db_name")or die("cannot connect"); 
+				$tbl_name="login";
+				$conn=mysqli_connect("$host", "$username", "$password","$db_name")or die("cannot connect");
 				//mysql_select_db("$db_name")or die("cannot select DB");
-				$star=$_POST['star']; 
+				$star=$_POST['star'];
+				//print_r($_POST);
 				$star = stripslashes($star);
 				$star = mysqli_real_escape_string($conn,$star);
-				$sql="SELECT * FROM $tbl_name WHERE star=$star";
+				$sql="SELECT * FROM $tbl_name WHERE star='$star'";
 				$result=mysqli_query($conn,$sql);
-				$count=mysqli_num_rows($conn,$result);
+				$count=mysqli_num_rows($result);
 				if($count==1){
-					$sqli="SELECT password FROM $tbl_name  WHERE star =$star";
-				 	$result2=mysqli_query($conn,$sqli);
- 						if($row = mysqli_fetch_array($conn,$result2)){
-							echo  $row['password'] ;
+					$sql="SELECT password FROM $tbl_name WHERE star ='$star'";
+				 	$result2=mysqli_query($conn,$sql);
+ 						if($row = mysqli_fetch_array($result2)){
+							echo  "Your Password :";
+							echo $row['password'];
+							//echo "here";
+							echo "<br><h5>kindly change your password</h5>";
+							echo "<form action=\"reset.php\">";
+							echo "<input type=\"submit\" value=\"change\">";
+							echo "</form>";
 	 					}
 				}
 				else {
