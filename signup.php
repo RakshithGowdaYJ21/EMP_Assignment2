@@ -34,7 +34,7 @@
 			echo $result;
     	$_SESSION['message'] = "you are now logged in";
 			$_SESSION['username'] = $username;
-			//header("location: homepage.php");
+			header("location: homepage.php");
       }
     else{
 			$_SESSION['message'] = "The two passwords do not match";
